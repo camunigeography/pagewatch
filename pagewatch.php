@@ -46,15 +46,17 @@ class pagewatch extends frontControllerApplication
 		# Specify additional actions
 		$actions = array (
 			'watch' => array (
-				'description' => '<img src="/images/icons/add.png" alt="Add" class="icon" /> Create a new watch',
+				'description' => 'Create a new watch',
 				'url' => 'watch/',
-				'tab' => '<img src="/images/icons/add.png" alt="Add" class="icon" /> Create new watch',
+				'tab' => 'Create new watch',
+				'icon' => 'add',
 				'authentication' => true,
 			),
 			'subscriptions' => array (
-				'description' => '<img src="/images/icons/application_view_list.png" alt="List" class="icon" /> Show all subscriptions',
+				'description' => 'Show all subscriptions',
 				'url' => 'subscriptions.html',
-				'tab' => '<img src="/images/icons/application_view_list.png" alt="List" class="icon" /> My subscriptions',
+				'tab' => 'My subscriptions',
+				'icon' => 'application_view_list',
 				'authentication' => true,
 			),
 			'runcheck' => array (
