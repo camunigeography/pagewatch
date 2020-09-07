@@ -95,6 +95,36 @@ class pagewatch extends frontControllerApplication
 	}
 	
 	
+	# Database structure definition
+	public function databaseStructure ()
+	{
+		return "
+			
+			-- Admininstrator
+			CREATE TABLE `administrators` (
+			  `crsid` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+			  `active` enum('Y','N') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Y',
+			  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+			  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+			  PRIMARY KEY (`crsid`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Administrators';
+			
+			-- Table for www.example.com
+			CREATE TABLE `www_example_com` (
+			  `id` int NOT NULL AUTO_INCREMENT COMMENT 'Record',
+			  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Username',
+			  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'E-mail address',
+			  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Name',
+			  `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Page address',
+			  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Page title',
+			  `md5` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Content hash',
+			  `unavailableCount` int NOT NULL DEFAULT '0' COMMENT 'Unavailability count',
+			  PRIMARY KEY (`id`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+		";
+	}
+	
+	
 	
 	# Home page
 	public function home ()
