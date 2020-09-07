@@ -185,11 +185,11 @@ class pagewatch extends frontControllerApplication
 		$changedPages = array ();
 		$deletedPages = array ();
 		foreach ($urls as $url => $databaseMd5) {
-			$urlQuoted = $this->databaseConnection->quote ($url);
 			
 			# Find the highest unavailability count for that URL
-			$query = 'SELECT MAX(unavailableCount) as unavailableCount FROM ' . $this->dataSource . " WHERE url = {$urlQuoted};";
-			if (!$data = $this->databaseConnection->getOne ($query)) {
+			$query = 'SELECT MAX(unavailableCount) as unavailableCount FROM ' . $this->dataSource . ' WHERE url = :url;';
+			$preparedStatementValues = array ('url' => $url);
+			if (!$data = $this->databaseConnection->getOne ($query, false, true, $preparedStatementValues)) {
 				$this->throwError ($query);
 				break;
 			}
@@ -298,8 +298,7 @@ class pagewatch extends frontControllerApplication
 			}
 			
 			# Re-query the database to get an updated list of items being watched and the user's name
-			$query = 'SELECT * FROM ' . $this->dataSource . " WHERE email = '" . $this->databaseConnection->escape ($email) . "';";
-			$data = $this->databaseConnection->getData ($query, "{$this->settings['database']}.{$this->settings['table']}");
+			$data = $this->databaseConnection->select ($this->settings['database'], $this->settings['table'], array ('email' => $email));
 			
 			# Obtain the name if required
 			$name = ($this->settings['useCamUniLookup'] && $this->user && ($userLookupData = camUniData::getLookupData ($this->user)) ? $userLookupData['name'] : false);
@@ -338,8 +337,7 @@ class pagewatch extends frontControllerApplication
 		$html .= "\n<p>You can <a href=\"{$this->baseUrl}/unsubscribe.html\">delete users whose e-mails are bouncing</a>.</p>";
 		
 		# Get the data
-		$query = 'SELECT * FROM ' . $this->dataSource . ' ORDER BY id;';
-		$watches = $this->databaseConnection->getData ($query, "{$this->settings['database']}.{$this->settings['table']}");
+		$watches = $this->databaseConnection->select ($this->settings['database'], $this->settings['table']);
 		
 		# Exit if no watches
 		if (!$watches) {
