@@ -1,0 +1,17 @@
+<?php
+
+# Define the settings
+$settings = array (
+	'password'		=> 'the_password',
+	'siteName'		=> 'My website',
+	'emailDomain'	=> 'example.com',
+	'bannedPages'	=> array (
+		'/temporary*',
+	),
+);
+
+# Load the pagewatch program
+require_once ('pagewatch.php');
+$pagewatch = new pagewatch ($settings);
+
+?>

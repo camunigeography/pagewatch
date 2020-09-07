@@ -1,0 +1,25 @@
+# Apache httpd.conf extract providing URL routing and other directives
+
+#   Example usage in httpd.conf:
+#   
+#   # Assessments
+#   Include /path/to/pagewatch/.httpd.conf.extract.txt
+#   Use MacroPagewatch "/pagewatch" "/path/to/pagewatch/:/path/to/php/libraries/"
+
+
+<Macro MacroPagewatch $baseUrl $includePath>
+	
+	<Location $baseUrl>
+		php_value include_path "$includePath"
+	</Location>
+	
+	Use MacroFrontControllerApplication "$baseUrl/" "Pagewatch"
+	
+	# Pagewatch
+	RewriteEngine on
+	RewriteRule ^$baseUrl/(create|subscriptions|unsubscribe|runcheck|clearance|dumpdata).html$ $baseUrl/index.html?action=$1 [L]
+	RewriteRule ^$baseUrl/(watch)/$ $baseUrl/index.html?action=$1 [L,QSA]
+	RewriteRule ^$baseUrl/(watch)$ $baseUrl/$1/ [R]
+	
+</Macro>
+
