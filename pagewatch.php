@@ -32,6 +32,7 @@ class pagewatch extends frontControllerApplication
 			'unavailabilityRemovalThreshold'	=> 3,							# The number of times when a page should be removed due to unavailability
 			'bannedPages'						=> array (),					# List of banned pages which cannot be watched, each starting from the site root (/); the wildcard * can be used at the end of a listed page
 			'emailSuffix'						=> '@cam.ac.uk',				# Suffix to append to username
+			'tabUlClass'						=> 'tabsflat',
 		);
 		
 		# Return the defaults
