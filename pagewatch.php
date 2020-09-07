@@ -13,7 +13,7 @@ require_once ('frontControllerApplication.php');
 class pagewatch extends frontControllerApplication
 {
 	# Function to assign defaults additional to the general application defaults
-	function defaults ()
+	public function defaults ()
 	{
 		# Specify available arguments as defaults or as NULL (to represent a required argument)
 		$defaults = array (
@@ -41,7 +41,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to assign additional actions
-	function actions ()
+	public function actions ()
 	{
 		# Specify additional actions
 		$actions = array (
@@ -97,7 +97,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Home page
-	function home ()
+	public function home ()
 	{
 		$this->watch ();
 		echo "\n" . "\n<div class=\"graybox\">";
@@ -108,14 +108,14 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Wrapper function to do a check which clears all current changes
-	function clearance ()
+	public function clearance ()
 	{
 		$this->runcheck ($clearance = true);
 	}
 	
 	
 	# Function to run a check on watched pages
-	function runcheck ($clearance = false)
+	public function runcheck ($clearance = false)
 	{
 		# Check that the run is being done only at allowed times
 		if (!$clearance && !$this->runCheckTimeValid ()) {
@@ -331,7 +331,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to dump current data to screen
-	function dumpdata ()
+	public function dumpdata ()
 	{
 		# Start the HTML
 		$html  = "\n<p>This page produces a straight dump out of the database.</p>";
@@ -359,7 +359,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to unsubscribe bouncing users
-	function unsubscribe ()
+	public function unsubscribe ()
 	{
 		# Get the list of users
 		$query = "SELECT DISTINCT username FROM {$this->dataSource} ORDER BY username;";
@@ -400,7 +400,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to list currently watched pages
-	function subscriptions ()
+	public function subscriptions ()
 	{
 		# Get the list for the user
 		if (!$data = $this->databaseConnection->select ($this->settings['database'], $this->settings['table'], array ('username' => $this->user), array ('id', 'url', 'title'), $associative = true, $orderBy = 'title,url')) {
@@ -466,7 +466,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to create a new watch entry
-	function watch ()
+	public function watch ()
 	{
 		# Determine the chosen address; $_GET cannot be used as mod_rewrite does not supply the query string in this way
 		$chosen = preg_replace ('/^action=watch(&?)/', '', urldecode ($_SERVER['QUERY_STRING']));
@@ -575,7 +575,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to check that the time is valid
-	function runCheckTimeValid ()
+	private function runCheckTimeValid ()
 	{
 		# Only allow running the check between 00:00 and 00:10
 		return ((date ('G') == 0) && (date ('i') < 10));
@@ -583,7 +583,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to check whether a page is banned
-	function pageBanned ($bannedPages, $currentPage)
+	private function pageBanned ($bannedPages, $currentPage)
 	{
 		# Loop through each banned page and return true if banned
 		foreach ($bannedPages as $bannedPage) {
@@ -605,7 +605,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to get the contents of a file; note that handling of a false result (i.e. a 404) should be dealt with by the calling function
-	function getPageContents ($url, $internalRetrievalPreferred = true)
+	private function getPageContents ($url, $internalRetrievalPreferred = true)
 	{
 		# Return false if the supplied argument is not a valid URL
 		if (!application::urlSyntacticallyValid ($url)) {return false;}
@@ -634,7 +634,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to convert an external URL (which is actually on the same server) to an internal filename
-	function convertUrlToInternalFile ($url, $directoryIndex)
+	private function convertUrlToInternalFile ($url, $directoryIndex)
 	{
 		# Return false if the URL contains a query string
 		if (strpos ($url, '?') !== false) {return false;}
@@ -652,7 +652,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to throw an error
-	function throwError ($lastQuery = '', $message = '')
+	public /* as per frontControllerApplication.php */ function throwError ($lastQuery = '', $message = '')
 	{
 		# Display the message if one is supplied or create the default one
 		if (!empty ($message)) {
@@ -677,7 +677,7 @@ class pagewatch extends frontControllerApplication
 	
 	
 	# Function to send an e-mail
-	function sendEmail ($recipient, $subject, $message, $headers = '')
+	private function sendEmail ($recipient, $subject, $message, $headers = '')
 	{
 		# Define standard e-mail headers; NB [ or ] in the 'from' name is not possible
 		$headers .= 'From: Pagewatch <' . $this->settings['webmaster'] . '>';
@@ -687,8 +687,5 @@ class pagewatch extends frontControllerApplication
 		return (application::utf8Mail ($recipient, '[Pagewatch] (' . $this->settings['siteName'] . ') ' . $subject, wordwrap ($message), $headers, $envelopeSender));
 	}
 }
-
-
-#!# Always update the current title in the database (and e-mail) if the page has changed
 
 ?>
