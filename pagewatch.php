@@ -1,12 +1,5 @@
 <?php
 
-/*
-	Invoke using
-	PHP from the command-line under cron - see cron-check.php
-	If not possible, wget is a workaround:
-	wget --quiet --delete-after --user-agent="Pagewatch" https://example.com/path/to/pagewatch/runcheck.html
-*/
-
 
 # Define a class implementing a pagewatch facility
 require_once ('frontControllerApplication.php');

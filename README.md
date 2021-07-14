@@ -32,10 +32,30 @@ Dependencies
 * [FamFamFam Silk Icons set](http://www.famfamfam.com/lab/icons/silk/)
 
 
+
+Daily e-mails
+-------------
+
+Invoke using PHP from the command-line under cron - see `cron-check.php` as noted above.
+
+If not possible, `wget` is a workaround:
+
+`wget --quiet --delete-after --user-agent="Pagewatch" https://example.com/path/to/pagewatch/runcheck.html`
+
+
+
+Database permissions
+--------------------
+
+MySQL needs:
+`GRANT SELECT,INSERT,UPDATE,DELETE ON pagewatch.* TO pagewatch@servername;`
+
+
+
 Author
 ------
 
-Martin Lucas-Smith, Department of Geography, 2003-20.
+Martin Lucas-Smith, Department of Geography, 2003-21.
 
 
 License
