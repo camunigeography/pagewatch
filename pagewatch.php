@@ -2,9 +2,9 @@
 
 /*
 	Invoke using
+	PHP from the command-line under cron - see cron-check.php
+	If not possible, wget is a workaround:
 	wget --quiet --delete-after --user-agent="Pagewatch" https://example.com/path/to/pagewatch/runcheck.html
-	or preferably PHP from the command-line, which would be
-	php -d include_path=/path/to/common/libraries/ -f /var/www/example.com/pagewatch/index.html '&action=runcheck'
 */
 
 
