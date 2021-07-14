@@ -8,6 +8,7 @@ $_SERVER['SERVER_NAME'] = 'www.example.com';
 $_SERVER['SERVER_ADMIN'] = 'webmaster@example.com';
 $_SERVER['DOCUMENT_ROOT'] = '/var/www/www.example.com/';
 $_SERVER['SCRIPT_FILENAME'] = '/var/www/www.example.com/pagewatch/index.html';
+$_SERVER['_SITE_URL'] = 'https://www.example.com';		// Not slash-terminated
 
 # Emulate query string arguments
 $_GET['action'] = 'runcheck';
