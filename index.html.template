@@ -10,6 +10,26 @@ $settings = array (
 	),
 );
 
+# Additional environment settings for shell context (for cron)
+if (PHP_SAPI === 'cli') {
+	
+	# Set the standard include path
+	ini_set ('include_path', '/path/to/pagewatch/:/path/to/libraries/');
+	
+	# Emulate the server CGI environment
+	$_SERVER['SERVER_NAME'] = 'www.example.com';
+	$_SERVER['DOCUMENT_ROOT'] = '/var/www/www.example.com/';
+	$_SERVER['SCRIPT_FILENAME'] = '/var/www/www.example.com/pagewatch/index.html';
+	$_SERVER['SERVER_ADMIN'] = 'webmaster@example.com';
+	$_SERVER['HTTPS'] = 'on';
+	
+	# Action - should be set as argument in the PHP call in cron, but can be set here if not possible, e.g. wget
+	//$_GET['action'] = 'runcheck';
+	
+	# Set the timezone (PHP 5.3+ requires this)
+	ini_set ('date.timezone', 'Europe/London');
+}
+
 # Load the pagewatch program
 require_once ('pagewatch.php');
 $pagewatch = new pagewatch ($settings);
