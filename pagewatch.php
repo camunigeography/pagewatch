@@ -323,12 +323,9 @@ class pagewatch extends frontControllerApplication
 			# Re-query the database to get an updated list of items being watched and the user's name
 			$data = $this->databaseConnection->select ($this->settings['database'], $this->settings['table'], array ('email' => $email));
 			
-			# Obtain the name if required
-			$name = ($this->settings['useCamUniLookup'] && $this->user && ($userLookupData = camUniData::getLookupData ($this->user)) ? $userLookupData['name'] : false);
-			
 			# Construct the e-mail message, taking the most recent name as the name
 			$message  = '';
-			if ($name) {$message .= "\n" . 'Dear ' . $name . ',';}
+			if ($this->userName) {$message .= "\n" . 'Dear ' . $this->userName . ',';}
 			if (!empty ($updates)) {
 				$message .= "\n\n" . 'The following page' . (count ($updates) > 1 ? 's' : '') . ' being watched for you ' . (count ($updates) > 1 ? 'have' : 'has') . ' been updated recently:';
 				$message .= "\n\n" . implode ("\n\n", $updates);
@@ -575,7 +572,7 @@ class pagewatch extends frontControllerApplication
 		if (!$discard = $form->process ()) {return;}
 		
 		# Add in the user's real name for ease of administration purposes
-		$data['name'] = $name = ($this->settings['useCamUniLookup'] && $this->user && ($userLookupData = camUniData::getLookupData ($this->user)) ? $userLookupData['name'] : false);
+		$data['name'] = $this->userName;
 		
 		# Add in an MD5 hash of the contents
 		$data['md5'] = md5 ($contents);
