@@ -4,14 +4,10 @@
 #   
 #   # Assessments
 #   Include /path/to/pagewatch/.httpd.conf.extract.txt
-#   Use MacroPagewatch "/pagewatch" "/path/to/pagewatch/:/path/to/php/libraries/"
+#   Use MacroPagewatch "/pagewatch"
 
 
-<Macro MacroPagewatch $baseUrl $includePath>
-	
-	<Location $baseUrl>
-		php_value include_path "$includePath"
-	</Location>
+<Macro MacroPagewatch $baseUrl>
 	
 	Use MacroFrontControllerApplication "$baseUrl/" "Pagewatch"
 	

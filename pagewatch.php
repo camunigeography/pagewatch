@@ -2,7 +2,6 @@
 
 
 # Define a class implementing a pagewatch facility
-require_once ('frontControllerApplication.php');
 class pagewatch extends frontControllerApplication
 {
 	# Function to assign defaults additional to the general application defaults

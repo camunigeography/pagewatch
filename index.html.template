@@ -13,9 +13,6 @@ $settings = array (
 # Additional environment settings for shell context (for cron)
 if (PHP_SAPI === 'cli') {
 	
-	# Set the standard include path
-	ini_set ('include_path', '/path/to/pagewatch/:/path/to/libraries/');
-	
 	# Emulate the server CGI environment
 	$_SERVER['SERVER_NAME'] = 'www.example.com';
 	$_SERVER['DOCUMENT_ROOT'] = '/var/www/www.example.com/';
@@ -31,7 +28,7 @@ if (PHP_SAPI === 'cli') {
 }
 
 # Load the pagewatch program
-require_once ('pagewatch.php');
+require_once ('vendor/autoload.php');
 $pagewatch = new pagewatch ($settings);
 
 ?>
