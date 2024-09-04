@@ -386,9 +386,11 @@ class pagewatch extends frontControllerApplication
 		$form = new form (array (
 			'formCompleteText' => false,
 			'div' => false,
+			'display' => 'paragraphs',
+			'reappear' => true,
 			'requiredFieldIndicator' => false,
 		));
-		$form->heading ('p', 'This form lets you remove the watches of a user whose e-mail address is now bouncing. Just select then confirm their username.');
+		$form->heading ('p', 'This form lets you remove the watches of a user whose e-mail address is now bouncing. No e-mails will be sent.');
 		$form->select (array (
 			'name'	=> 'username',
 			'title'	=> 'Select user to remove',
@@ -396,13 +398,6 @@ class pagewatch extends frontControllerApplication
 			'values' => $users,
 			'autofocus' => true,
 		));
-		$form->input (array (
-			'name'			=> 'confirm',
-			'title'			=> 'Type username to confirm',
-			'required'		=> true,
-			'discard'		=> true,
-		));
-		$form->validation ('same', array ('username', 'confirm'));
 		if (!$result = $form->process ()) {return false;}
 		
 		# Delete the watches
@@ -412,7 +407,7 @@ class pagewatch extends frontControllerApplication
 		}
 		
 		# Confirm success
-		echo "\n<p>The watches of user " . htmlspecialchars ($result['username']) . ' have been deleted.</p>';
+		echo "\n<p>{$this->tick} The watches of user " . htmlspecialchars ($result['username']) . ' have been deleted. You can clear another above if wished.</p>';
 	}
 	
 	
