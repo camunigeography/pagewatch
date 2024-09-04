@@ -643,7 +643,7 @@ class pagewatch extends frontControllerApplication
 		if (!$contents = @file_get_contents ($url)) {return false;}
 		
 		# Ignore marked "ignore-changes" sections
-		$contents = preg_replace ('|<!-- ignore-changes -->.+<!-- /ignore-changes -->|U', '', $contents);	// Note use of U (PCRE_UNGREEDY)
+		$contents = preg_replace ('|<!-- ignore-changes -->.+<!-- /ignore-changes -->|sU', '', $contents);	// Note use of U (PCRE_UNGREEDY)
 		
 		# Return the contents
 		return $contents;
