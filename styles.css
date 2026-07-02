@@ -1,3 +1,5 @@
 
 
 .pagewatch div.confirm input.button {font-size: 20px; color: #c33;}
+.pagewatch p.success {animation: highlight 2s ease;}
+@keyframes highlight { from {background: yellow;} to {background: white;} }

@@ -407,7 +407,7 @@ class pagewatch extends frontControllerApplication
 		}
 		
 		# Confirm success
-		echo "\n<p>{$this->tick} The watches of user " . htmlspecialchars ($result['username']) . ' have been deleted. You can clear another above if wished.</p>';
+		echo "\n<p class=\"success\">{$this->tick} The watches of user <strong>" . htmlspecialchars ($result['username']) . '</strong> have been deleted. You can clear another above if wished.</p>';
 	}
 	
 	
