@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "camunigeography/camunidata",
-            "version": "v2.1.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/camunigeography/camunidata.git",
-                "reference": "2a91247a0bd866073c647d37033cadb15129e7b0"
+                "reference": "8be58893e891045700347286b40cfea00cc1cafc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/camunigeography/camunidata/zipball/2a91247a0bd866073c647d37033cadb15129e7b0",
-                "reference": "2a91247a0bd866073c647d37033cadb15129e7b0",
+                "url": "https://api.github.com/repos/camunigeography/camunidata/zipball/8be58893e891045700347286b40cfea00cc1cafc",
+                "reference": "8be58893e891045700347286b40cfea00cc1cafc",
                 "shasum": ""
             },
             "type": "library",
@@ -35,25 +35,25 @@
                     "name": "mvl22"
                 }
             ],
-            "description": "PHP library camUniData within the pureContent library suite",
+            "description": "PHP library camUniData",
             "support": {
                 "issues": "https://github.com/camunigeography/camunidata/issues",
-                "source": "https://github.com/camunigeography/camunidata/tree/v2.1.0"
+                "source": "https://github.com/camunigeography/camunidata/tree/v2.2.1"
             },
-            "time": "2024-01-15T17:05:45+00:00"
+            "time": "2026-09-28T19:44:18+00:00"
         },
         {
             "name": "libpurecontent/application",
-            "version": "v1.9.3",
+            "version": "v1.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/application.git",
-                "reference": "6b0e2176772b07ca2ff55fb061f80e752b7a170b"
+                "reference": "396b1a02a68880aa886bf73a5ebb85fa230e2f64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/application/zipball/6b0e2176772b07ca2ff55fb061f80e752b7a170b",
-                "reference": "6b0e2176772b07ca2ff55fb061f80e752b7a170b",
+                "url": "https://api.github.com/repos/libpurecontent/application/zipball/396b1a02a68880aa886bf73a5ebb85fa230e2f64",
+                "reference": "396b1a02a68880aa886bf73a5ebb85fa230e2f64",
                 "shasum": ""
             },
             "require": {
@@ -78,28 +78,30 @@
             "description": "PHP library application within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/application/issues",
-                "source": "https://github.com/libpurecontent/application/tree/v1.9.3"
+                "source": "https://github.com/libpurecontent/application/tree/v1.10.5"
             },
-            "time": "2024-01-26T18:35:38+00:00"
+            "time": "2026-10-22T17:20:34+00:00"
         },
         {
             "name": "libpurecontent/csv",
-            "version": "v1.5.2",
+            "version": "v1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/csv.git",
-                "reference": "7161b0cdbfc558b825cc23c316593777a42133dd"
+                "reference": "05330dcd9f31e8726ac52ba842085bf470b0f874"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/csv/zipball/7161b0cdbfc558b825cc23c316593777a42133dd",
-                "reference": "7161b0cdbfc558b825cc23c316593777a42133dd",
+                "url": "https://api.github.com/repos/libpurecontent/csv/zipball/05330dcd9f31e8726ac52ba842085bf470b0f874",
+                "reference": "05330dcd9f31e8726ac52ba842085bf470b0f874",
                 "shasum": ""
             },
             "require": {
                 "libpurecontent/application": "^1.9",
-                "libpurecontent/directories": "^1.3",
-                "phpoffice/phpexcel": "^1.8"
+                "libpurecontent/directories": "^1.4"
+            },
+            "suggest": {
+                "phpoffice/phpspreadsheet": "Required if using xls2csv"
             },
             "type": "library",
             "autoload": {
@@ -119,27 +121,27 @@
             "description": "PHP library csv within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/csv/issues",
-                "source": "https://github.com/libpurecontent/csv/tree/v1.5.2"
+                "source": "https://github.com/libpurecontent/csv/tree/v1.8.1"
             },
-            "time": "2024-01-26T18:17:57+00:00"
+            "time": "2026-10-13T11:42:14+00:00"
         },
         {
             "name": "libpurecontent/database",
-            "version": "v4.2.2",
+            "version": "v4.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/database.git",
-                "reference": "3a87053ce6f11c9caa69184219a0f86c2be85cec"
+                "reference": "373e64e3f11fa728fa006369636c595cc4f75a1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/database/zipball/3a87053ce6f11c9caa69184219a0f86c2be85cec",
-                "reference": "3a87053ce6f11c9caa69184219a0f86c2be85cec",
+                "url": "https://api.github.com/repos/libpurecontent/database/zipball/373e64e3f11fa728fa006369636c595cc4f75a1f",
+                "reference": "373e64e3f11fa728fa006369636c595cc4f75a1f",
                 "shasum": ""
             },
             "require": {
                 "libpurecontent/application": "^1.9",
-                "libpurecontent/csv": "^1.5",
+                "libpurecontent/csv": "^1.6",
                 "libpurecontent/pagination": "^1.1"
             },
             "type": "library",
@@ -160,22 +162,22 @@
             "description": "PHP library database within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/database/issues",
-                "source": "https://github.com/libpurecontent/database/tree/v4.2.2"
+                "source": "https://github.com/libpurecontent/database/tree/v4.6.2"
             },
-            "time": "2024-02-07T13:30:14+00:00"
+            "time": "2026-10-15T18:55:37+00:00"
         },
         {
             "name": "libpurecontent/directories",
-            "version": "v1.3.3",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/directories.git",
-                "reference": "d4085939b0f73952385be6621f03ef5d06591bfe"
+                "reference": "2f4bf6ff46ddd48d07f618f62eef8b261347ec02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/directories/zipball/d4085939b0f73952385be6621f03ef5d06591bfe",
-                "reference": "d4085939b0f73952385be6621f03ef5d06591bfe",
+                "url": "https://api.github.com/repos/libpurecontent/directories/zipball/2f4bf6ff46ddd48d07f618f62eef8b261347ec02",
+                "reference": "2f4bf6ff46ddd48d07f618f62eef8b261347ec02",
                 "shasum": ""
             },
             "require": {
@@ -200,33 +202,33 @@
             "description": "PHP library directories within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/directories/issues",
-                "source": "https://github.com/libpurecontent/directories/tree/v1.3.3"
+                "source": "https://github.com/libpurecontent/directories/tree/v1.4.0"
             },
-            "time": "2024-02-06T13:47:42+00:00"
+            "time": "2024-09-17T15:02:44+00:00"
         },
         {
             "name": "libpurecontent/frontcontrollerapplication",
-            "version": "v1.13.3",
+            "version": "v1.20.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/frontcontrollerapplication.git",
-                "reference": "5458fb9d59d9c854d3b9ff4ecae8b1c2c3a0cf41"
+                "reference": "0b1c2e0d18089ecc5b76ffda2059d7f444e4b7fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/frontcontrollerapplication/zipball/5458fb9d59d9c854d3b9ff4ecae8b1c2c3a0cf41",
-                "reference": "5458fb9d59d9c854d3b9ff4ecae8b1c2c3a0cf41",
+                "url": "https://api.github.com/repos/libpurecontent/frontcontrollerapplication/zipball/0b1c2e0d18089ecc5b76ffda2059d7f444e4b7fc",
+                "reference": "0b1c2e0d18089ecc5b76ffda2059d7f444e4b7fc",
                 "shasum": ""
             },
             "require": {
-                "camunigeography/camunidata": "^2.1",
-                "libpurecontent/application": "^1.9",
-                "libpurecontent/database": "^4.2",
-                "libpurecontent/directories": "^1.3",
-                "libpurecontent/sinenomine": "^1.1",
-                "libpurecontent/ultimateform": "^1.29",
-                "libpurecontent/useraccount": "^1.7",
-                "smarty/smarty": "^4.3"
+                "camunigeography/camunidata": "^2.2",
+                "libpurecontent/application": "^1.10",
+                "libpurecontent/database": "^4.4",
+                "libpurecontent/directories": "^1.4",
+                "libpurecontent/sinenomine": "^1.2",
+                "libpurecontent/ultimateform": "^1.31",
+                "libpurecontent/useraccount": "^1.12",
+                "smarty/smarty": "^5.8"
             },
             "type": "library",
             "autoload": {
@@ -246,22 +248,22 @@
             "description": "PHP library frontControllerApplication within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/frontcontrollerapplication/issues",
-                "source": "https://github.com/libpurecontent/frontcontrollerapplication/tree/v1.13.3"
+                "source": "https://github.com/libpurecontent/frontcontrollerapplication/tree/v1.20.8"
             },
-            "time": "2024-03-04T12:03:29+00:00"
+            "time": "2026-10-09T00:28:04+00:00"
         },
         {
             "name": "libpurecontent/image",
-            "version": "v1.4.2",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/image.git",
-                "reference": "1f1969f16315eefbe0a77b77b87622d38d827452"
+                "reference": "141eb57f86bae67d9e58b55dd67151a74d481faf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/image/zipball/1f1969f16315eefbe0a77b77b87622d38d827452",
-                "reference": "1f1969f16315eefbe0a77b77b87622d38d827452",
+                "url": "https://api.github.com/repos/libpurecontent/image/zipball/141eb57f86bae67d9e58b55dd67151a74d481faf",
+                "reference": "141eb57f86bae67d9e58b55dd67151a74d481faf",
                 "shasum": ""
             },
             "require": {
@@ -285,22 +287,22 @@
             "description": "PHP library image within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/image/issues",
-                "source": "https://github.com/libpurecontent/image/tree/v1.4.2"
+                "source": "https://github.com/libpurecontent/image/tree/v1.5.1"
             },
-            "time": "2024-01-26T18:19:32+00:00"
+            "time": "2026-09-27T11:14:15+00:00"
         },
         {
             "name": "libpurecontent/pagination",
-            "version": "v1.1.2",
+            "version": "v1.1.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/pagination.git",
-                "reference": "8fd430cfa0af4bf20361420b2169e9ad99097ba3"
+                "reference": "7db8cb65ddacff6b8467fd8b7ebbeea045d45645"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/pagination/zipball/8fd430cfa0af4bf20361420b2169e9ad99097ba3",
-                "reference": "8fd430cfa0af4bf20361420b2169e9ad99097ba3",
+                "url": "https://api.github.com/repos/libpurecontent/pagination/zipball/7db8cb65ddacff6b8467fd8b7ebbeea045d45645",
+                "reference": "7db8cb65ddacff6b8467fd8b7ebbeea045d45645",
                 "shasum": ""
             },
             "require": {
@@ -325,36 +327,37 @@
             "description": "PHP library pagination within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/pagination/issues",
-                "source": "https://github.com/libpurecontent/pagination/tree/v1.1.2"
+                "source": "https://github.com/libpurecontent/pagination/tree/v1.1.13"
             },
-            "time": "2024-01-26T18:39:17+00:00"
+            "time": "2026-10-22T16:53:24+00:00"
         },
         {
             "name": "libpurecontent/sinenomine",
-            "version": "v1.1.2",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/sinenomine.git",
-                "reference": "26abfebe78b8d7f4402bbb3dc593e3096ae0b433"
+                "reference": "d9317a8a5fbabe5532d28f820c94c452acb8d977"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/sinenomine/zipball/26abfebe78b8d7f4402bbb3dc593e3096ae0b433",
-                "reference": "26abfebe78b8d7f4402bbb3dc593e3096ae0b433",
+                "url": "https://api.github.com/repos/libpurecontent/sinenomine/zipball/d9317a8a5fbabe5532d28f820c94c452acb8d977",
+                "reference": "d9317a8a5fbabe5532d28f820c94c452acb8d977",
                 "shasum": ""
             },
             "require": {
-                "libpurecontent/application": "^1.9",
-                "libpurecontent/database": "^4.2",
+                "libpurecontent/application": "^1.10",
+                "libpurecontent/database": "^4.6",
                 "libpurecontent/pagination": "^1.1",
-                "libpurecontent/timedate": "^1.3",
-                "libpurecontent/ultimateform": "^1.29"
+                "libpurecontent/timedate": "^1.4",
+                "libpurecontent/ultimateform": "^1.32"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "sinenomine": "src/"
-                }
+                "files": [
+                    "src/sinenomine.php",
+                    "src/session.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -368,22 +371,22 @@
             "description": "PHP library sinenomine within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/sinenomine/issues",
-                "source": "https://github.com/libpurecontent/sinenomine/tree/v1.1.2"
+                "source": "https://github.com/libpurecontent/sinenomine/tree/v1.3.0"
             },
-            "time": "2024-02-08T17:51:46+00:00"
+            "time": "2026-10-15T17:01:21+00:00"
         },
         {
             "name": "libpurecontent/timedate",
-            "version": "v1.3.0",
+            "version": "v1.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/timedate.git",
-                "reference": "7560395e0f4ba6ed283f7f77508c9c36229d9e70"
+                "reference": "de62538b0f24c3229b73e380497161d8a6adca38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/timedate/zipball/7560395e0f4ba6ed283f7f77508c9c36229d9e70",
-                "reference": "7560395e0f4ba6ed283f7f77508c9c36229d9e70",
+                "url": "https://api.github.com/repos/libpurecontent/timedate/zipball/de62538b0f24c3229b73e380497161d8a6adca38",
+                "reference": "de62538b0f24c3229b73e380497161d8a6adca38",
                 "shasum": ""
             },
             "type": "library",
@@ -404,28 +407,28 @@
             "description": "PHP library timedate within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/timedate/issues",
-                "source": "https://github.com/libpurecontent/timedate/tree/v1.3.0"
+                "source": "https://github.com/libpurecontent/timedate/tree/v1.4.4"
             },
-            "time": "2024-01-15T17:06:17+00:00"
+            "time": "2026-10-23T13:14:19+00:00"
         },
         {
             "name": "libpurecontent/ultimateform",
-            "version": "v1.29.2",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/ultimateform.git",
-                "reference": "bb02ff5237d694b232b026c150b638554c5bc72c"
+                "reference": "f1898371aa72d388c806b858d6b197ef72040424"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/ultimateform/zipball/bb02ff5237d694b232b026c150b638554c5bc72c",
-                "reference": "bb02ff5237d694b232b026c150b638554c5bc72c",
+                "url": "https://api.github.com/repos/libpurecontent/ultimateform/zipball/f1898371aa72d388c806b858d6b197ef72040424",
+                "reference": "f1898371aa72d388c806b858d6b197ef72040424",
                 "shasum": ""
             },
             "require": {
-                "libpurecontent/application": "^1.9",
-                "libpurecontent/database": "^4.2",
-                "libpurecontent/timedate": "^1.3"
+                "libpurecontent/application": "^1.10",
+                "libpurecontent/database": "^4.6",
+                "libpurecontent/timedate": "^1.4"
             },
             "type": "library",
             "autoload": {
@@ -445,28 +448,28 @@
             "description": "PHP library ultimateForm within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/ultimateform/issues",
-                "source": "https://github.com/libpurecontent/ultimateform/tree/v1.29.2"
+                "source": "https://github.com/libpurecontent/ultimateform/tree/v1.32.0"
             },
-            "time": "2024-02-24T03:14:18+00:00"
+            "time": "2026-10-13T18:04:37+00:00"
         },
         {
             "name": "libpurecontent/useraccount",
-            "version": "v1.7.3",
+            "version": "v1.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libpurecontent/useraccount.git",
-                "reference": "822f6986c6ab01b3f214d6e125205c594a0548b8"
+                "reference": "ddf2ab7dc30ccc78ee14c681e3939dde53f4c7ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libpurecontent/useraccount/zipball/822f6986c6ab01b3f214d6e125205c594a0548b8",
-                "reference": "822f6986c6ab01b3f214d6e125205c594a0548b8",
+                "url": "https://api.github.com/repos/libpurecontent/useraccount/zipball/ddf2ab7dc30ccc78ee14c681e3939dde53f4c7ed",
+                "reference": "ddf2ab7dc30ccc78ee14c681e3939dde53f4c7ed",
                 "shasum": ""
             },
             "require": {
                 "libpurecontent/application": "^1.9",
                 "libpurecontent/database": "^4.2",
-                "libpurecontent/ultimateform": "^1.29"
+                "libpurecontent/ultimateform": "^1.31"
             },
             "type": "library",
             "autoload": {
@@ -486,9 +489,9 @@
             "description": "PHP library userAccount within the pureContent library suite",
             "support": {
                 "issues": "https://github.com/libpurecontent/useraccount/issues",
-                "source": "https://github.com/libpurecontent/useraccount/tree/v1.7.3"
+                "source": "https://github.com/libpurecontent/useraccount/tree/v1.12.3"
             },
-            "time": "2024-02-22T15:38:22+00:00"
+            "time": "2026-10-08T23:47:21+00:00"
         },
         {
             "name": "pear/console_getopt",
@@ -610,16 +613,16 @@
         },
         {
             "name": "pear/pear-core-minimal",
-            "version": "v1.10.14",
+            "version": "v1.10.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/pear-core-minimal.git",
-                "reference": "a86fc145edb5caedbf96527214ce3cadc9de4a32"
+                "reference": "c7b55789d01de0ce090d289b73f1bbd6a2f113b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/pear-core-minimal/zipball/a86fc145edb5caedbf96527214ce3cadc9de4a32",
-                "reference": "a86fc145edb5caedbf96527214ce3cadc9de4a32",
+                "url": "https://api.github.com/repos/pear/pear-core-minimal/zipball/c7b55789d01de0ce090d289b73f1bbd6a2f113b1",
+                "reference": "c7b55789d01de0ce090d289b73f1bbd6a2f113b1",
                 "shasum": ""
             },
             "require": {
@@ -632,9 +635,9 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "": "src/"
-                }
+                "classmap": [
+                    "src/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "include-path": [
@@ -655,7 +658,7 @@
                 "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=PEAR",
                 "source": "https://github.com/pear/pear-core-minimal"
             },
-            "time": "2023-11-26T16:15:38+00:00"
+            "time": "2025-12-14T20:37:07+00:00"
         },
         {
             "name": "pear/pear_exception",
@@ -717,98 +720,40 @@
             "time": "2021-03-21T15:43:46+00:00"
         },
         {
-            "name": "phpoffice/phpexcel",
-            "version": "1.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHPOffice/PHPExcel.git",
-                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
-                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
-                "shasum": ""
-            },
-            "require": {
-                "ext-xml": "*",
-                "ext-xmlwriter": "*",
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "PHPExcel": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL"
-            ],
-            "authors": [
-                {
-                    "name": "Maarten Balliauw",
-                    "homepage": "http://blog.maartenballiauw.be"
-                },
-                {
-                    "name": "Mark Baker"
-                },
-                {
-                    "name": "Franck Lefevre",
-                    "homepage": "http://blog.rootslabs.net"
-                },
-                {
-                    "name": "Erik Tilt"
-                }
-            ],
-            "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
-            "homepage": "http://phpexcel.codeplex.com",
-            "keywords": [
-                "OpenXML",
-                "excel",
-                "php",
-                "spreadsheet",
-                "xls",
-                "xlsx"
-            ],
-            "support": {
-                "issues": "https://github.com/PHPOffice/PHPExcel/issues",
-                "source": "https://github.com/PHPOffice/PHPExcel/tree/master"
-            },
-            "abandoned": "phpoffice/phpspreadsheet",
-            "time": "2015-05-01T07:00:55+00:00"
-        },
-        {
             "name": "smarty/smarty",
-            "version": "v4.4.1",
+            "version": "v5.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smarty-php/smarty.git",
-                "reference": "f4152e9b814ae2369b6e4935c05e1e0c3654318d"
+                "reference": "0ae663525dcbc9e996feb2a867e43bc85f960938"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/f4152e9b814ae2369b6e4935c05e1e0c3654318d",
-                "reference": "f4152e9b814ae2369b6e4935c05e1e0c3654318d",
+                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/0ae663525dcbc9e996feb2a867e43bc85f960938",
+                "reference": "0ae663525dcbc9e996feb2a867e43bc85f960938",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1 || ^8.0"
+                "php": "^7.2 || ^8.0",
+                "symfony/polyfill-mbstring": "^1.27"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5 || ^7.5",
-                "smarty/smarty-lexer": "^3.1"
+                "smarty/smarty-lexer": "^4.0.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0.x-dev"
+                    "dev-master": "5.0.x-dev"
                 }
             },
             "autoload": {
-                "classmap": [
-                    "libs/"
-                ]
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Smarty\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -840,18 +785,109 @@
             "support": {
                 "forum": "https://github.com/smarty-php/smarty/discussions",
                 "issues": "https://github.com/smarty-php/smarty/issues",
-                "source": "https://github.com/smarty-php/smarty/tree/v4.4.1"
+                "source": "https://github.com/smarty-php/smarty/tree/v5.8.5"
             },
-            "time": "2024-02-26T13:58:37+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/wisskid",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-10-04T21:31:42+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.43.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "4d5d331bf731e0aedbc6b2f5e61135b7b7996a72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/4d5d331bf731e0aedbc6b2f5e61135b7b7996a72",
+                "reference": "4d5d331bf731e0aedbc6b2f5e61135b7b7996a72",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "php": ">=7.2"
+            },
+            "provide": {
+                "ext-mbstring": "*"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.43.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-09-24T15:19:04+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }
